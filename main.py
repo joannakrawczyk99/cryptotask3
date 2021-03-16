@@ -16,7 +16,7 @@ if(password1 == password2):
     conn = sqlite3.connect('passwords.db')
     c = conn.cursor()
 
-    db1 = addDb.DatabaseController(conn, c)
+    db1 = addDb.dbFunctions(conn, c)
     # db1.createTable()
     db1.insertData(username, key, u1.getSalt())
 

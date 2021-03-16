@@ -1,5 +1,5 @@
 
-class DatabaseController:
+class dbFunctions:
 
     def __init__(self, database, cursor):
         self.connection = database
