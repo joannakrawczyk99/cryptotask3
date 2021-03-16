@@ -9,7 +9,16 @@ password1 = input()
 print('Enter your password again: ')
 password2 = input()
 
-if(password1 == password2):
+
+def checkPasswords(pass1, pass2):
+    if (pass1 == pass2):
+        return True
+
+    else:
+        return False
+
+
+if checkPasswords(password1, password2):
     u1 = addHash.UserProfile(username, password1)
     key = u1.hashPassword(password1)
 
@@ -22,3 +31,5 @@ if(password1 == password2):
 
 else:
     print('Passwords are different. Try again.')
+
+
