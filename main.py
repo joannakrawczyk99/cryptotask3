@@ -5,14 +5,20 @@ import sqlite3
 print('Enter your username: ')
 username = input()
 print('Enter your password: ')
-password = input()
+password1 = input()
+print('Enter your password again: ')
+password2 = input()
 
-u1 = addHash.UserProfile(username, password)
-key = u1.hashPassword(password)
+if(password1 == password2):
+    u1 = addHash.UserProfile(username, password1)
+    key = u1.hashPassword(password1)
 
-conn = sqlite3.connect('passwords.db')
-c = conn.cursor()
+    conn = sqlite3.connect('passwords.db')
+    c = conn.cursor()
 
-db1 = addDb.DatabaseController(conn, c)
-#db1.createTable()
-db1.insertData(username, key, u1.getSalt())
+    db1 = addDb.DatabaseController(conn, c)
+    # db1.createTable()
+    db1.insertData(username, key, u1.getSalt())
+
+else:
+    print('Passwords are different. Try again.')
