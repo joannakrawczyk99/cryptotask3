@@ -16,3 +16,8 @@ class dbFunctions:
         self.c.execute(sql, (username, key, salt))
         self.connection.commit()
         print('The record has been added to the database.')
+
+    def showEverything(self):
+        sql = '''SELECT * FROM passwords'''
+        self.c.execute(sql)
+        self.connection.commit()
