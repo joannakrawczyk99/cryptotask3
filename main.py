@@ -4,6 +4,7 @@ import addHash
 import addDb
 import sqlite3
 
+
 print('Enter your username: ')
 username = input()
 assert username != '', "Username should not be empty"
