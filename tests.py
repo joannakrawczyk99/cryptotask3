@@ -4,10 +4,10 @@ import addDb
 from addHash import UserProfile
 
 class MyTestCase(unittest.TestCase):
-    def init_User_Profile_test(self):
-        user = UserProfile()
+    def test_init_User_Profile(self):
+        user = UserProfile("username", "password")
         mess = 'Given object is not instance od UserProfile'
-        self.assertIsInstance(user, addDb.dbFunctions, mess)
+        self.assertIsInstance(user, UserProfile, mess)
 
 
 if __name__ == '__main__':
