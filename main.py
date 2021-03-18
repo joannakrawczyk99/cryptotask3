@@ -46,7 +46,7 @@ if checkPasswords(password1, password2):
     c = conn.cursor()
 
     db1 = addDb.DbFunctions(conn, c)
-    # db1.createTable() #i did it only once
+    db1.createTableIfNotExists()
     db1.insertData(username, key, salt)
 
     verifyPassword(password1, salt, key)

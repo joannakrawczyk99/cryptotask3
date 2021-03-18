@@ -19,6 +19,5 @@ class UserProfile():
             self.salt,
             100000
         )
-        print(key)
         return key
 
