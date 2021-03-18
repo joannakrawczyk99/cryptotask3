@@ -12,6 +12,7 @@ class UserProfile():
         return self.salt
 
     def hashPassword(self, password):
+        """Hashing using pbkdf2_hmac."""
         key = hashlib.pbkdf2_hmac(
             'sha256',
             str.encode(password),
@@ -19,5 +20,5 @@ class UserProfile():
             100000
         )
         print(key)
-        return key.hex()
+        return key
 

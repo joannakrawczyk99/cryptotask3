@@ -31,9 +31,10 @@ def verifyPassword(password, salt, key):
         salt,
         iterations
     )
-    if new.hex() != key:
+    if new != key:
+        print('Verification failed.')
         print('Expected: ', key)
-        print('Got: ', new.hex())
+        print('Got: ', new)
 
 
 if checkPasswords(password1, password2):
