@@ -13,9 +13,9 @@ class MyTestCase(unittest.TestCase):
     def test_init_dbFunctions(self):
         conn = sqlite3.connect('passwords.db')
         c = conn.cursor()
-        db = addDb.dbFunctions(conn, c)
+        db = addDb.DbFunctions(conn, c)
         mess = 'Given object is not instance od dbFunctions'
-        self.assertIsInstance(db, addDb.dbFunctions, mess)
+        self.assertIsInstance(db, addDb.DbFunctions, mess)
 
 if __name__ == '__main__':
     unittest.main()
