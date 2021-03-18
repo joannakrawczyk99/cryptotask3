@@ -17,5 +17,8 @@ class MyTestCase(unittest.TestCase):
         mess = 'Given object is not instance od dbFunctions'
         self.assertIsInstance(db, addDb.DbFunctions, mess)
 
+
+
+
 if __name__ == '__main__':
     unittest.main()

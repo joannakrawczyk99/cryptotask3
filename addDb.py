@@ -1,6 +1,6 @@
 
 class DbFunctions:
-
+    """Class DbFunctions is for database controlling. It allows to create new table and insert data. """
     def __init__(self, database, cursor):
         self.connection = database
         self.c = cursor
@@ -17,7 +17,4 @@ class DbFunctions:
         self.connection.commit()
         print('The record has been added to the database.')
 
-    def showEverything(self):
-        sql = '''SELECT * FROM passwords'''
-        self.c.execute(sql)
-        self.connection.commit()
+
