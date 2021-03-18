@@ -4,10 +4,13 @@ import sqlite3
 
 print('Enter your username: ')
 username = input()
+assert username != '', "Username should not be empty"
 print('Enter your password: ')
 password1 = input()
+assert password1 != '', "Password should not be empty"
 print('Enter your password again: ')
 password2 = input()
+assert password2 != '', "Password should not be empty"
 
 
 def checkPasswords(pass1, pass2):
