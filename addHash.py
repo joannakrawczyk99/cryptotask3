@@ -8,9 +8,9 @@ class UserProfile:
     Attributes
     ----------
     username : str
-        username that selects the user
+        username entered by the user
     password : str
-        password that selects the user
+        password entered by the user
     Methods
     -------
      hashPassword(password):
@@ -20,8 +20,8 @@ class UserProfile:
         """
         Construct all the necessary attributes for the userprofile object.
 
-        :param username: username that selects the user
-        :param password: password that selects the user
+        :param username: username entered by the user
+        :param password: password entered by the user
 
         salt: str
             generating unique, random salt for the password
@@ -36,7 +36,7 @@ class UserProfile:
     def hashPassword(self, password):
         """
         Returns hashed password and salt
-        :param password: password that selects the user
+        :param password: password entered by the user
         :return: hashed password
         """
         key = hashlib.pbkdf2_hmac(
@@ -46,4 +46,6 @@ class UserProfile:
             100000
         )
         return key
+
+
 
